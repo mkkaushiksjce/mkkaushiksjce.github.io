@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #223;
+  background: #f2f3fa;
+}
+
+.login-bg {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #4f8bff 0%, #b3d1ff 100%);
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(80,120,255,0.18);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  min-width: 320px;
+  text-align: center;
+}
+
+.login-container h2 { margin-bottom: 1.5rem; }
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #e2e6f2;
+  border-radius: 7px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.login-container input:focus { border-color: #4f8bff; }
+
+.login-container button {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background: #4f8bff;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-container button:hover { background: #3577dd; }
+
+.popup {
+  background: #f87d7d;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 7px;
+  margin-top: 12px;
+  display: block;
+}
+
+.hidden { display: none !important; }
+
+/* ====== Dashboard ====== */
+.dashboard-bg { background: #f2f3fa; min-height: 100vh; }
+
+.sidebar {
+  width: 200px;
+  background: #fff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 21px -7px #d1dbef;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h3 {
+  margin-bottom: 2rem;
+  color: #4f8bff;
+  font-size: 1.4rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.nav-link, .logout-btn {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  width: 100%;
+  color: #223;
+  border-radius: 7px;
+  transition: background 0.18s, color 0.18s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-link.active, .nav-link:hover {
+  background: #4f8bff;
+  color: #fff;
+}
+
+.logout-btn {
+  background: #f87d7d;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.logout-btn:hover {
+  background: #e86161;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 3rem 2rem;
+}
+
+.dashboard-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 22px -15px #b3cdff;
+  padding: 2rem 1.5rem;
+  min-height: 200px;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.16s;
+}
+
+.dashboard-section.hidden { display: none !important; }
+
+@media (max-width: 680px) {
+  .sidebar { width: 120px; }
+  .main-content { margin-left: 130px; padding: 1rem 0.5rem; }
+  .login-container { min-width: 220px; }
+}
+
+.center-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.zerodha-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  background: #fff;
+  color: #1a4d9c;
+  border: 2px solid #4f8bff;
+  border-radius: 8px;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #e9f2ff;
+  transition: background 0.15s, color 0.15s, box-shadow 0.2s;
+}
+
+.zerodha-btn:hover {
+  background: #4f8bff;
+  color: #fff;
+  box-shadow: 0 4px 16px #b3cfff;
+}
+
+.zerodha-logo {
+  width: 26px;
+  height: 26px;
+  background: #fff;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drag-area {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  border: 2px dotted #4f8bff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #f5faff;
+  position: relative;
+  margin-bottom: 8px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.drag-area.dragover {
+  border-color: #3577dd;
+  background: #eaf2ff;
+}
+
+.file-icon {
+  margin-bottom: 2px;
+}
+
+.drag-text {
+  font-size: 0.74rem;
+  color: #4f8bff;
+  text-align: center;
+  width: 52px;
+}
+
+.upload-input {
+  display: none;
+}
+.login-container .error-message {
+  color: #f87d7d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.login-container .error-message.hidden {
+  display: none;
+}
+
+.login-container .success-message {
+  color: #4f8bff;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.login-container .success-message.hidden {
+  display: none;
+}       

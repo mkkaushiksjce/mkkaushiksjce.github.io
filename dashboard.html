@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Stock Analysis Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-bg">
+  <nav class="sidebar">
+    <h3>Stock Tool</h3>
+    <ul>
+      <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-section="portfolio">Portfolio</a></li>
+      <li><a href="#" class="nav-link" data-section="userinfo">User Information</a></li>
+      <li><a href="#" class="logout-btn" id="logoutBtn">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="main-content">
+    <section id="homeSection" class="dashboard-section">Welcome to the Stock Analysis Tool!<br><br>Your personalized stock insights await.</section>
+    <section id="portfolioSection" class="dashboard-section hidden">
+      <h2>Portfolio</h2>
+      <p>No stocks added yet. (Sample content for your portfolio.)</p>
+    </section>
+    <div class="center-buttons">
+  <!-- Zerodha Connect Button -->
+  <button class="zerodha-btn">
+    <img src="https://zerodha.com/static/images/logo.svg" alt="Zerodha Logo" class="zerodha-logo">
+    Connect with Zerodha
+  </button>
+
+  <!-- Excel Upload Button & Area -->
+  <div class="upload-container">
+    <label for="excel-upload" class="upload-label">
+      <div class="drag-area" id="drag-area">
+        <!-- File SVG Icon -->
+        <svg class="file-icon" width="24" height="24" fill="none" stroke="#4f8bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <span class="drag-text">Drag and drop the file</span>
+      </div>
+      <input type="file" id="excel-upload" class="upload-input" accept=".xls,.xlsx" />
+    </label>
+  </div>
+</div>
+
+    <section id="userinfoSection" class="dashboard-section hidden">
+      <h2>User Information</h2>
+      <p><strong>Username:</strong> Admin</p>
+      <p><strong>Email:</strong> admin@example.com</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
